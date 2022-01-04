@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getRestaurants } from '../Services/Api'
+import RestaurantList from '../components/RestaurantList'
 
 function Restaurants () {
   const [restaurants, setRestaurants] = useState([])
@@ -23,7 +24,7 @@ function Restaurants () {
   return (
     <div>
       <h1>Restaurants</h1>
-      <pre>{JSON.stringify(restaurants, null, 2)}</pre>
+      <RestaurantList restaurants={restaurants} />
     </div>
 
   )
